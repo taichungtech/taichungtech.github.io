@@ -30,7 +30,8 @@
         }
 
         .home-page {
-            height: 95.8vh;
+            height: 100vh;
+            background-image: linear-gradient( 180deg, #000000, #002472);
         }
 
         .min-block {
@@ -69,85 +70,73 @@
             height: 600px;
         }
 
-        #home-content h1 span {
-            color: #ffc000;
+        #home-title span {
+            letter-spacing: 3px;
         }
 
+        .navbar-content {
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .navbar-text {
+            font-size: 24px;
+        }
+
+        .about-us-page {
+            height: 100vh;
+            background-image: linear-gradient( 0deg, #000000, #002472);
+        }
     </style>
 </head>
 <body>
 	<div id="main">
-		<nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<nav id="header" class="navbar navbar-expand fixed-top text-white pt-3 navbar-text">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <span>
-                        <span>I</span>ET Oncampus <small class="text-muted"> x </small> Taichung Tech
-                    </span>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    </ul>
-                    <form class="d-flex">
-                        <ul class="nav nav-pills">
+                <div class="row justify-content-between align-items-center navbar-content">
+                    <div class="col-2">
+                        <a class="navbar-brand ps-5" href="#">
+                            <img src="./img/logo/IET Oncampus x Taichung Tech/Logo_white.png" alt="" width="80" height="80">
+                        </a>
+                    </div>
+                    <div class="col-auto container">
+                        <ul class="nav nav-pills justify-content-center">
                             <li class="nav-item">
-                                <a class="nav-link" href="#scrollspyHome">Home</a>
+                                <a class="nav-link" href="#scrollspyHome">首頁</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#scrollspyAboutUs">About Us</a>
+                                <a class="nav-link" href="#scrollspyAboutUs">關於社群</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#scrollspyKnowUs">Know Us</a>
+                                <a class="nav-link" href="#scrollspyKnowUs">認識我們</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">活動資訊</a>
                             </li>
                         </ul>
-                    </form>
+                    </div>
+                    <div class="col-2">
+                        <form class="float-end others">
+                            <i class="fa fa-language" aria-hidden="true"></i>
+                        </form>
+                    </div>
                 </div>
+
             </div>
+            
 		</nav>
 		<section id="content">
 			<div class="content-wrap">
                 <div id="scrollspyHome" class="home-page d-flex justify-content-center align-items-center">
-                    <div id="home-carouselControls" class="carousel w-100 h-100 slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <figure class="min-block figure">
-                                    <img src="img/20210419.jpg" alt="...">
-                                </figure >
-                            </div>
-                            <div class="carousel-item">
-                                <figure class="min-block figure">
-                                    <img src="img/microbit_2.jpg" alt="...">
-                                </figure>
-                            </div>
-                            <div class="carousel-item">
-                                <figure class="min-block figure">
-                                    <img src="img/microbit_1.jpg" alt="...">
-                                </figure>
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#home-carouselControls" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#home-carouselControls" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                    <div id="home-content" class="container text-white position-absolute">
-                        <div class="text-center d-flex flex-column">
-                            <div class="home-logo-2">
-                                <figure>
-                                    <img src="img/logo/Logo_2+3_改主題色系.svg">
-                                </figure>
-                            </div>
-                            <h1 class="display-4">
-                                <span>I</span>ET <span>O</span>ncampus <small class="text-muted"> x </small> <span>T</span>aichung <span>T</span>ech
+                    <div class="container">
+                        <div class="text-center text-white">
+                            <h1 id="home-title" class="d-flex flex-column display-3 fw-bold">
+                                <span style="letter-spacing: 5px">IET</span>
+                                <span>Oncampus</span>
+                                <span><small style="color: #fffa65;">x</small></span>
+                                <span>Taichung Tech</span>
                             </h1>
                         </div>
-                        
                     </div>
                 </div>
                 <div id="scrollspyAboutUs" class="about-us-page"></div>
