@@ -90,17 +90,38 @@
             background-image: linear-gradient( 180deg, 
             #001442 0%,
             #000000 10%, 
-            #002472 100%);
+            #002472 110%);
         }
 
         .home-icon {
-            position: absolute;
-            right: 0px;
+            position: fixed;
+            right: 0;
+            font-size: 2.0em;
+            z-index: 1000;
         }
 
         .icon-language:hover {
             color: #18dcff;
         }
+
+        .home-icon button {
+            padding: 10px;
+            border: none;
+            color: #fff;
+            text-align: center;
+            height: 60px;
+            width: 60px;
+        }
+
+
+        .home-icon .fb {
+            background-color: #3b5998;
+        }
+
+        .home-icon .ig {
+            background-color: #bc2a8d;
+        }
+
     </style>
 </head>
 <body>
@@ -147,13 +168,29 @@
                             <h1 id="home-title" class="d-flex flex-column display-3 fw-bold">
                                 <span style="letter-spacing: 5px; line-height: 52px;">IET</span>
                                 <span>Oncampus</span>
-                                <span><small style="color: #fffa65;">x</small></span>
+                                <span><small>x</small></span>
                                 <span>Taichung Tech</span>
                             </h1>
                         </div>
                     </div>
-                    
-                    
+                    <div class="home-icon text-center">
+                        <button class="fb">
+                            <i class="fab fa-facebook-square"></i>
+                        </button>
+                        <br>
+                        <button class="ig">
+                            <i class="fab fa-instagram"></i>
+                        </button>
+                        <br>
+                    </div>
+                    <!-- <div class="home-icon">
+                        <button class="home-icon icon-facebook">
+                            <i class="fab fa-facebook-square"></i>
+                        </button>
+                        <button class="home-icon icon-instagram">
+                            <i class="fab fa-instagram"></i>
+                        </button>
+                    </div> -->
                 </div>
                 <div id="scrollspyAboutUs" class="about-us-page"></div>
                 <div id="scrollspyKnowUs" class="know-us-page"></div>
