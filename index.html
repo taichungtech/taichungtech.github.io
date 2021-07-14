@@ -96,7 +96,7 @@
         .home-icon {
             position: fixed;
             right: 0;
-            font-size: 2.0em;
+            font-size: 3.5em;
             z-index: 1000;
         }
 
@@ -109,17 +109,124 @@
             border: none;
             color: #fff;
             text-align: center;
-            height: 60px;
-            width: 60px;
+            height: 80px;
+            width: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
 
         .home-icon .fb {
-            background-color: #3b5998;
+            /* border-radius: 40px; */
+            /* background-color: #3b5998; */
+            -webkit-text-fill-color: transparent;
+            background: 
+                -webkit-linear-gradient(270deg, rgb(25,175,255), rgb(0,99,225));
+                -webkit-background-clip: text;
+        }
+
+        .home-icon .fb:hover {
+            /* background-color: #3b5998; */
+            -webkit-text-fill-color: white;
+            
+            background: 
+                -webkit-linear-gradient(270deg, rgb(25,175,255), rgb(0,99,225));
+            
+            -webkit-background-clip: unset;
         }
 
         .home-icon .ig {
-            background-color: #bc2a8d;
+            /* border-radius: 20px; */
+            /* background-color: #bc2a8d; */
+            -webkit-text-fill-color: transparent;
+            background:
+                /* Use radial gradients to get the rounded */
+                /* gradient effect in each corner */
+
+                /* left bottom */
+                radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%),
+                radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%),
+                /* left top */
+                radial-gradient(
+                    ellipse farthest-corner at 0 -25%,
+                    #5258cf,
+                    transparent 50%
+                ),
+                radial-gradient(
+                    ellipse farthest-corner at 20% -50%,
+                    #5258cf,
+                    transparent 50%
+                ),
+                /* right top */
+                radial-gradient(
+                    ellipse farthest-corner at 100% 0,
+                    #893dc2,
+                    transparent 50%
+                ),
+                radial-gradient(
+                    ellipse farthest-corner at 60% -20%,
+                    #893dc2,
+                    transparent 50%
+                ),
+                /* right bottom */
+                radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent),
+                /* create a base coat to smooth
+                corner gradients */
+                linear-gradient(
+                    #6559ca,
+                    #bc318f 30%,
+                    #e33f5f 50%,
+                    #f77638 70%,
+                    #fec66d 100%
+                );
+            -webkit-background-clip: text;
+        }
+
+        .home-icon .ig:hover {
+            /* background-color: #bc2a8d; */
+            -webkit-text-fill-color: white;
+            background:
+                /* Use radial gradients to get the rounded */
+                /* gradient effect in each corner */
+
+                /* left bottom */
+                radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%),
+                radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%),
+                /* left top */
+                radial-gradient(
+                    ellipse farthest-corner at 0 -25%,
+                    #5258cf,
+                    transparent 50%
+                ),
+                radial-gradient(
+                    ellipse farthest-corner at 20% -50%,
+                    #5258cf,
+                    transparent 50%
+                ),
+                /* right top */
+                radial-gradient(
+                    ellipse farthest-corner at 100% 0,
+                    #893dc2,
+                    transparent 50%
+                ),
+                radial-gradient(
+                    ellipse farthest-corner at 60% -20%,
+                    #893dc2,
+                    transparent 50%
+                ),
+                /* right bottom */
+                radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent),
+                /* create a base coat to smooth
+                corner gradients */
+                linear-gradient(
+                    #6559ca,
+                    #bc318f 30%,
+                    #e33f5f 50%,
+                    #f77638 70%,
+                    #fec66d 100%
+                );
+            -webkit-background-clip: unset;
         }
 
     </style>
@@ -156,9 +263,7 @@
                         </form>
                     </div>
                 </div>
-
             </div>
-            
 		</nav>
 		<section id="content">
 			<div class="content-wrap">
@@ -173,24 +278,14 @@
                             </h1>
                         </div>
                     </div>
-                    <div class="home-icon text-center">
+                    <div class="home-icon d-flex flex-column justify-content-center align-items-center">
                         <button class="fb">
-                            <i class="fab fa-facebook-square"></i>
+                            <i class="fab fa-facebook"></i>
                         </button>
-                        <br>
                         <button class="ig">
                             <i class="fab fa-instagram"></i>
                         </button>
-                        <br>
                     </div>
-                    <!-- <div class="home-icon">
-                        <button class="home-icon icon-facebook">
-                            <i class="fab fa-facebook-square"></i>
-                        </button>
-                        <button class="home-icon icon-instagram">
-                            <i class="fab fa-instagram"></i>
-                        </button>
-                    </div> -->
                 </div>
                 <div id="scrollspyAboutUs" class="about-us-page"></div>
                 <div id="scrollspyKnowUs" class="know-us-page"></div>
