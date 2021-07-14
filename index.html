@@ -31,7 +31,9 @@
 
         .home-page {
             height: 100vh;
-            background-image: linear-gradient( 180deg, #000000, #002472);
+            background-image: linear-gradient( 180deg, 
+            #000000 0%, #000000 90%, 
+            #001442 100%);
         }
 
         .min-block {
@@ -79,19 +81,31 @@
             width: 100%;
         }
 
-        .navbar-text {
+        /* .navbar-text {
             font-size: 24px;
-        }
+        } */
 
         .about-us-page {
             height: 100vh;
-            background-image: linear-gradient( 0deg, #000000, #002472);
+            background-image: linear-gradient( 180deg, 
+            #001442 0%,
+            #000000 10%, 
+            #002472 100%);
+        }
+
+        .home-icon {
+            position: absolute;
+            right: 0px;
+        }
+
+        .icon-language:hover {
+            color: #18dcff;
         }
     </style>
 </head>
 <body>
 	<div id="main">
-		<nav id="header" class="navbar navbar-expand fixed-top text-white pt-3 navbar-text">
+		<nav id="header" class="navbar navbar-expand fixed-top text-white pt-3 navbar-text h4">
             <div class="container-fluid">
                 <div class="row justify-content-between align-items-center navbar-content">
                     <div class="col-2">
@@ -102,22 +116,22 @@
                     <div class="col-auto container">
                         <ul class="nav nav-pills justify-content-center">
                             <li class="nav-item">
-                                <a class="nav-link" href="#scrollspyHome">首頁</a>
+                                <a class="nav-link link-light" href="#scrollspyHome">首頁</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#scrollspyAboutUs">關於社群</a>
+                                <a class="nav-link link-light" href="#scrollspyAboutUs">關於社群</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#scrollspyKnowUs">認識我們</a>
+                                <a class="nav-link link-light" href="#scrollspyKnowUs">認識我們</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">活動資訊</a>
+                                <a class="nav-link link-light disabled" href="#" tabindex="-1" aria-disabled="true">活動資訊</a>
                             </li>
                         </ul>
                     </div>
-                    <div class="col-2">
+                    <div class="col-2 h3 m-0">
                         <form class="float-end others">
-                            <i class="fa fa-language" aria-hidden="true"></i>
+                            <i class="fa fa-language icon-language" aria-hidden="true"></i>
                         </form>
                     </div>
                 </div>
@@ -131,13 +145,15 @@
                     <div class="container">
                         <div class="text-center text-white">
                             <h1 id="home-title" class="d-flex flex-column display-3 fw-bold">
-                                <span style="letter-spacing: 5px">IET</span>
+                                <span style="letter-spacing: 5px; line-height: 52px;">IET</span>
                                 <span>Oncampus</span>
                                 <span><small style="color: #fffa65;">x</small></span>
                                 <span>Taichung Tech</span>
                             </h1>
                         </div>
                     </div>
+                    
+                    
                 </div>
                 <div id="scrollspyAboutUs" class="about-us-page"></div>
                 <div id="scrollspyKnowUs" class="know-us-page"></div>
