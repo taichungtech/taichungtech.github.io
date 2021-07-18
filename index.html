@@ -33,7 +33,7 @@
             height: 100vh;
             background-image: linear-gradient( 180deg, 
             #000000 0%, #000000 90%, 
-            #001442 100%);
+            rgb(0,14,42) 100%);
         }
 
         #home-carouselControls .carousel-inner, .carousel-item {
@@ -63,11 +63,11 @@
         }
 
         .about-us-page {
-            padding-top: 20vh;
+            padding-top: 25vh;
             background-image: linear-gradient( 180deg, 
-            #001442 0%,
+            rgb(0,14,42) 0%,
             #000000 10%, 
-            #002472 110%);
+            rgb(0,24,72) 110%);
         }
 
         .home-icon {
@@ -212,18 +212,40 @@
         }
 
         .about-us-images {
-            
-            height: 20vh;
+            margin-top: 10vh;
+            height: 40vh;
             background-image: linear-gradient( to bottom, 
-            transparent 75%,
-            #a5ffee 75% 100%);
+            transparent 40%,
+            #a5ffee 40% 60%,
+            transparent 60%);
         }
 
         .about-us-images img {
-            margin-top: 10vh;
             height: 30vh;
             padding-left: 10px;
             padding-right: 10px;
+        }
+
+        .know-us-page {
+            padding-top: 15vh;
+            background-image: linear-gradient( 180deg, 
+            rgb(0,24,72) 0%,
+            rgb(31,78,121) 50%,
+            rgb(188,215,238));
+        }
+
+        .about-us-card .card {
+            border-radius: 0;
+            background-color: rgb(127,127,127);
+        }
+
+        .partners figure {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .partners img {
+            height: 100px;
         }
 
     </style>
@@ -310,8 +332,97 @@
                             <img src="./img/microbit_2.jpg" class="rounded mx-auto d-block" alt="...">
                         </figure>
                     </div>
+                    <!-- <div style="height: 10vh;">
+
+                    </div> -->
                 </div>
-                <div id="scrollspyKnowUs" class="know-us-page"></div>
+                <div id="scrollspyKnowUs" class="know-us-page">
+                    <div class="container h-100 pt-5 d-flex flex-column justify-content-center">
+                        <div class="text-white">
+                            <h1 class="display-3 fw-bolder pb-4 ps-1">Target</h1>
+                            <h2 class="display-5 pb-2 ps-1">社群目標</h2>
+                            <p class="about-us-content lead d-flex flex-column py-3 ps-4">
+                                <span class="pb-4">
+                                    因似別路二。斷輕動萬，許眾致時學盡發。
+                                </span>
+                                <span>
+                                    者那住只不通統業無有現成斯個冷讓把工以區她頭小。活國因經種味大而具此，間紅樂斷在院找洲業老為不人識談人這……了生古利邊我去願笑孩之麼李臺了……話愛二可設來，裡適相小女無助！口種社子出的品，還地收不語藝習我我原想作兒真隊一國去。
+                                </span>
+                            </p>
+                            <div class="row about-us-card">
+                                <div class="col-sm-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <span class="d-flex flex-row align-items-end">
+                                                <h1 class="card-title display-3">News</h1>
+                                                <span class="badge bg-primary fs-4">最新消息</span>
+                                            </span>
+                                            <figure>
+                                                
+                                            </figure>
+                                            <p class="card-text d-flex flex-column text-center">
+                                                <img src="https://fakeimg.pl/300x100/00ffff">
+                                                <div class="container">
+                                                    <ul class="list-group">
+                                                        <li class="list-group-item list-group-item-secondary">News item 1</li>
+                                                        <li class="list-group-item list-group-item-secondary">News item 1</li>
+                                                        <li class="list-group-item list-group-item-secondary">News item 1</li>
+                                                    </ul>
+                                                </div>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <span class="d-flex flex-row align-items-end">
+                                                <h1 class="card-title display-3">
+                                                    Events
+                                                </h1>
+                                                <span class="badge bg-primary fs-4">
+                                                    活動資訊
+                                                </span>
+                                            </span>
+                                            <figure>
+                                                
+                                            </figure>
+                                            <p class="card-text d-flex flex-column text-center">
+                                                <img src="https://fakeimg.pl/300x100/00ffff">
+                                                <div class="container">
+                                                    <ul class="list-group">
+                                                        <li class="list-group-item list-group-item-secondary">Events item 1</li>
+                                                        <li class="list-group-item list-group-item-secondary">Events item 1</li>
+                                                        <li class="list-group-item list-group-item-secondary">Events item 1</li>
+                                                    </ul>
+                                                </div>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container pt-5 partners">
+                                <div class="text-center">
+                                    <h1 class="display-4">Our Global Partners</h1>
+                                    <div class="d-flex flex-row justify-content-center align-items-center">
+                                        <figure>
+                                            <img src="./img/logo/IET/IET LOGO.jpg">
+                                        </figure>
+                                        <figure>
+                                            <img src="./img/logo/NUTC/logo.gif">
+                                        </figure>
+                                        <figure>
+                                            <img src="./img/logo/水利方工作室/logo.png">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="page-bottom d-flex justify-content-center" style="padding-top: 10vh;">
+                                <i class="fas fa-angle-double-up" style="font-size: 84px;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 			</div>
 		</section>
 		<footer id="footer" class="dark">
