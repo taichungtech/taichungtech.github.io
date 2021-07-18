@@ -36,25 +36,6 @@
             #001442 100%);
         }
 
-        .min-block {
-            position:relative;
-            width: 100%;
-            height: 100%;
-            overflow:hidden;
-        }
-
-        .min-block img{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            display: block;
-            min-width: 100%;
-            min-height: 100%;
-            transform:translate(-50%,-50%);
-            -webkit-filter: brightness(50%); /*兼容 Chrome, Safari, Opera */
-            filter: brightness(50%);
-        }
-
         #home-carouselControls .carousel-inner, .carousel-item {
             height: 100%;
         }
@@ -81,12 +62,8 @@
             width: 100%;
         }
 
-        /* .navbar-text {
-            font-size: 24px;
-        } */
-
         .about-us-page {
-            height: 100vh;
+            padding-top: 20vh;
             background-image: linear-gradient( 180deg, 
             #001442 0%,
             #000000 10%, 
@@ -96,7 +73,7 @@
         .home-icon {
             position: fixed;
             right: 0;
-            font-size: 3.5em;
+            font-size: 4em;
             z-index: 1000;
         }
 
@@ -114,36 +91,32 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            transition: 0.25s;
+            -webkit-transition: 0.25s;
         }
 
-
         .home-icon .fb {
-            /* border-radius: 40px; */
-            /* background-color: #3b5998; */
             -webkit-text-fill-color: transparent;
             background: 
                 -webkit-linear-gradient(270deg, rgb(25,175,255), rgb(0,99,225));
-                -webkit-background-clip: text;
+            -webkit-background-clip: text;
+            opacity: 0.8;
         }
 
         .home-icon .fb:hover {
-            /* background-color: #3b5998; */
             -webkit-text-fill-color: white;
-            
             background: 
                 -webkit-linear-gradient(270deg, rgb(25,175,255), rgb(0,99,225));
             
             -webkit-background-clip: unset;
+            opacity: 1;
         }
 
         .home-icon .ig {
-            /* border-radius: 20px; */
-            /* background-color: #bc2a8d; */
             -webkit-text-fill-color: transparent;
             background:
                 /* Use radial gradients to get the rounded */
                 /* gradient effect in each corner */
-
                 /* left bottom */
                 radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%),
                 radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%),
@@ -181,15 +154,14 @@
                     #fec66d 100%
                 );
             -webkit-background-clip: text;
+            opacity: 0.8;
         }
 
         .home-icon .ig:hover {
-            /* background-color: #bc2a8d; */
             -webkit-text-fill-color: white;
             background:
                 /* Use radial gradients to get the rounded */
                 /* gradient effect in each corner */
-
                 /* left bottom */
                 radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%),
                 radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%),
@@ -227,6 +199,31 @@
                     #fec66d 100%
                 );
             -webkit-background-clip: unset;
+            opacity: 1;
+        }
+
+        .about-us-content {
+
+        }
+
+        .lead {
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        .about-us-images {
+            
+            height: 20vh;
+            background-image: linear-gradient( to bottom, 
+            transparent 75%,
+            #a5ffee 75% 100%);
+        }
+
+        .about-us-images img {
+            margin-top: 10vh;
+            height: 30vh;
+            padding-left: 10px;
+            padding-right: 10px;
         }
 
     </style>
@@ -287,7 +284,33 @@
                         </button>
                     </div>
                 </div>
-                <div id="scrollspyAboutUs" class="about-us-page"></div>
+                <div id="scrollspyAboutUs" class="about-us-page">
+                    <div class="container h-100 pt-5 d-flex flex-column justify-content-center">
+                        <div class="text-white">
+                            <h1 class="display-3 fw-bolder pb-4 ps-1">About</h1>
+                            <h2 class="display-5 pb-2 ps-1">關於社群</h2>
+                            <p class="about-us-content lead d-flex flex-column py-3 ps-4">
+                                <span class="pb-4">
+                                    國際工程與科技學會（Institution of Engineering and Technology，IET），為國際知名的電子電機領域之工程學術機構。 Oncampus 是 IET 當前大力推動的校園推廣計畫，其目標是招募對於科技、工程等領域有興趣的學生組成社團並以永續經營方式在校園舉辦各種科技分享活動並積極結合業界與國際資源培育學生來提升其職能與國際化程度。
+                                </span>
+                                <span>
+                                    發源於國立臺中科技大學的 IET Oncampus x Taichung Tech 是臺灣第一個 IET Oncampus 社群。期望本社群能夠成為中部地區最活躍的技術開放社群，並且以人工智慧、物聯網、雲端技術以及網站、APP 開發等技術主軸結合至人文、商業與設計等等領域，應用或共同發想解決 SDGs 之 17 項議題為本社團舉辦小聚分享的主要核心。
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-100 about-us-images d-flex flex-row justify-content-center align-items-center">
+                        <figure class="figure">
+                            <img src="./img/20210419.jpg" class="rounded mx-auto d-block" alt="...">
+                        </figure>
+                        <figure class="figure pt-5">
+                            <img src="./img/microbit_1.jpg" class="rounded mx-auto d-block" alt="...">
+                        </figure>
+                        <figure class="figure pt-2">
+                            <img src="./img/microbit_2.jpg" class="rounded mx-auto d-block" alt="...">
+                        </figure>
+                    </div>
+                </div>
                 <div id="scrollspyKnowUs" class="know-us-page"></div>
 			</div>
 		</section>
