@@ -1,0 +1,84 @@
+.clock{
+    position: absolute;
+    width: 50em;
+    height: 50em;
+    z-index: 0;
+    /* background-color: rgba(255 , 255  , 255, 0.5); */
+    border-radius: 50%;
+    box-shadow: 0 -20px 15px rgba(255, 255, 255, 0.3),
+                inset   0   -15px 15px rgba(255, 255, 255, 0.05),
+                0 15px 15px rgba(0, 0, 0, 0.3),
+                inset 0 15px 15px rgba(0, 0, 0, 0.05),
+                50px 0 50px -15px rgba(145 ,140 ,140 ,30%);
+}
+.dot{
+    position: absolute;
+    bottom:calc(50% - 10px);
+    left: calc(50% - 10px);
+    background-color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+.hour{
+    --rotation:0;
+    --bot-margin:50%;
+    --left-margin:50%;
+    position: absolute;
+    bottom: var(--bot-margin);
+    left: var(--left-margin);
+    width: 5px;
+    height: 10%;
+    text-align: center;
+    transform-origin: bottom;
+    transform: translateX(-50%) rotate(var(--rotation));
+    background-color: white;
+}
+.hour12{
+    --rotation: 0deg;
+    --bot-margin: 90%;
+    --left-margin: 50%;
+}
+.hour3{
+    --rotation: 90deg;
+    --bot-margin: 50%;
+    --left-margin: 90%;
+}
+.hour6{
+    --rotation: 180deg;
+    --bot-margin: 10%;
+    --left-margin: 50%;
+}
+.hour9{
+    --rotation: 270deg;
+    --bot-margin: 50%;
+    --left-margin: 10%;
+}
+
+.hand{
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    width: 10px;
+    height: 40%;
+    background-color: white;
+    transform-origin: bottom;
+    transform: rotate(90deg);
+    /* border-radius: 10px; */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.mintue{
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    width: 10px;
+    height: 20%;
+    background-color: white;
+    transform-origin: bottom;
+    transform: rotate(30deg);
+    /* border-radius: 10px; */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
