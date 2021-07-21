@@ -15,8 +15,8 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
         integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-    <link rel="stylesheet" href="clock.css">
-    <link rel="stylesheet" href="star.css">
+    <link rel="stylesheet" href="./css/clock.css">
+    <link rel="stylesheet" href="./css/star.css">
     <style>
         html {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -34,6 +34,15 @@
             box-shadow: none;
         }
 
+        .container .container-fluid {
+            z-index: 1;
+        }
+
+        .navbar-content {
+            justify-content: space-between;
+            width: 100%;
+        }
+
         .home-page {
             height: 100vh;
             background-image: linear-gradient(180deg,
@@ -41,8 +50,7 @@
                     rgb(0, 14, 42) 100%);
         }
 
-        #home-carouselControls .carousel-inner,
-        .carousel-item {
+        #home-carouselControls .carousel-inner, .carousel-item {
             height: 100%;
         }
 
@@ -61,23 +69,6 @@
 
         #home-title span {
             letter-spacing: 3px;
-        }
-
-        .container {
-            z-index: 1;
-        }
-
-        .navbar-content {
-            justify-content: space-between;
-            width: 100%;
-        }
-
-        .about-us-page {
-            padding-top: 25vh;
-            background-image: linear-gradient(180deg,
-                    rgb(0, 14, 42) 0%,
-                    #000000 10%,
-                    rgb(0, 24, 72) 110%);
         }
 
         .home-icon {
@@ -192,7 +183,13 @@
             opacity: 1;
         }
 
-        .about-us-content {}
+        .about-us-page {
+            padding-top: 25vh;
+            background-image: linear-gradient(180deg,
+                    rgb(0, 14, 42) 0%,
+                    #000000 10%,
+                    rgb(0, 24, 72) 110%);
+        }
 
         .lead {
             font-size: 1.5rem;
@@ -201,7 +198,6 @@
 
         .about-us-images {
             margin-top: 10vh;
-            height: 40vh;
             background-image: linear-gradient(to bottom,
                     transparent 40%,
                     #a5ffee 40% 60%,
@@ -222,24 +218,54 @@
                     rgb(188, 215, 238));
         }
 
-        .about-us-card .card {
+        .know-us-card .card {
             border-radius: 0;
             background-color: rgb(127, 127, 127);
+            box-shadow: 0px 0px 10px 4px rgb(0, 24, 72);
         }
 
-        .partners figure {
+        .know-us-partners figure {
             padding-left: 30px;
             padding-right: 30px;
         }
 
-        .partners img {
+        .know-us-partners img {
             height: 100px;
         }
+
+        .logo-icon img{
+            height: 10rem;
+        }
+
+        .logo-content {
+            font-size: 2.5rem;
+        }
+
+        .footer-qrcode {
+            padding-right: 3rem;
+        }
+
+        .footer-qrcode img{
+            height: 10rem;
+        }
+
+        .footer-facebook {
+            min-height: 400px;
+            min-width: 300px;
+            
+        }
+
+        #footer {
+            background-color: #001840 !important;
+        }
     </style>
+
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v11.0" nonce="VCAtdjmH"></script>
 </head>
 
 <body>
     <div id="main">
+        <div id="fb-root"></div>
         <div id="stars"></div>
         <div id="stars2"></div>
         <div id="stars3"></div>
@@ -313,7 +339,7 @@
                         <div class="text-white">
                             <h1 class="display-3 fw-bolder pb-4 ps-1">About</h1>
                             <h2 class="display-5 pb-2 ps-1">關於社群</h2>
-                            <p class="about-us-content lead d-flex flex-column py-3 ps-4">
+                            <p class=" lead d-flex flex-column py-3 ps-4">
                                 <span class="pb-4">
                                     國際工程與科技學會（Institution of Engineering and Technology，IET），為國際知名的電子電機領域之工程學術機構。
                                     Oncampus 是 IET
@@ -327,27 +353,39 @@
                             </p>
                         </div>
                     </div>
-                    <div class="w-100 about-us-images d-flex flex-row justify-content-center align-items-center">
-                        <figure class="figure">
-                            <img src="./img/20210419.jpg" class="rounded mx-auto d-block" alt="...">
-                        </figure>
-                        <figure class="figure pt-5">
-                            <img src="./img/microbit_1.jpg" class="rounded mx-auto d-block" alt="...">
-                        </figure>
-                        <figure class="figure pt-2">
-                            <img src="./img/microbit_2.jpg" class="rounded mx-auto d-block" alt="...">
-                        </figure>
-                    </div>
-                    <!-- <div style="height: 10vh;">
-
+                    <!-- <div class="container-fluid">
+                        <div class="about-us-images d-flex flex-row justify-content-center align-items-center">
+                            <figure class="figure">
+                                <img src="./img/20210419.jpg" class="rounded mx-auto d-block" alt="...">
+                            </figure>
+                            <figure class="figure pt-5">
+                                <img src="./img/microbit_1.jpg" class="rounded mx-auto d-block" alt="...">
+                            </figure>
+                            <figure class="figure pt-2">
+                                <img src="./img/microbit_2.jpg" class="rounded mx-auto d-block" alt="...">
+                            </figure>
+                        </div>
                     </div> -->
+                    <div class="container-fluid about-us-images">
+                        <div class="row">
+                            <figure class="figure col-12 col-xxl-4">
+                                <img src="./img/20210419.jpg" class="rounded mx-auto d-block" alt="...">
+                            </figure>
+                            <figure class="figure col-12 col-xxl-4">
+                                <img src="./img/microbit_1.jpg" class="rounded mx-auto d-block" alt="...">
+                            </figure>
+                            <figure class="figure col-12 col-xxl-4">
+                                <img src="./img/microbit_2.jpg" class="rounded mx-auto d-block" alt="...">
+                            </figure>
+                        </div>
+                    </div>
                 </div>
                 <div id="scrollspyKnowUs" class="know-us-page">
                     <div class="container h-100 pt-5 d-flex flex-column justify-content-center">
                         <div class="text-white">
                             <h1 class="display-3 fw-bolder pb-4 ps-1">Target</h1>
                             <h2 class="display-5 pb-2 ps-1">社群目標</h2>
-                            <p class="about-us-content lead d-flex flex-column py-3 ps-4">
+                            <p class=" lead d-flex flex-column py-3 ps-4">
                                 <span class="pb-4">
                                     因似別路二。斷輕動萬，許眾致時學盡發。
                                 </span>
@@ -355,30 +393,31 @@
                                     者那住只不通統業無有現成斯個冷讓把工以區她頭小。活國因經種味大而具此，間紅樂斷在院找洲業老為不人識談人這……了生古利邊我去願笑孩之麼李臺了……話愛二可設來，裡適相小女無助！口種社子出的品，還地收不語藝習我我原想作兒真隊一國去。
                                 </span>
                             </p>
-                            <div class="row about-us-card">
+                            <div class="row know-us-card">
                                 <div class="col-sm-6">
                                     <div class="card">
                                         <div class="card-body">
                                             <span class="d-flex flex-row align-items-end">
-                                                <h1 class="card-title display-3">News</h1>
-                                                <span class="badge bg-primary fs-4">最新消息</span>
+                                                <h1 class="card-title display-3 fw-bold" style="color: #00ffff">
+                                                    News
+                                                </h1>
+                                                <span class="badge bg-primary fs-4">
+                                                    最新消息
+                                                </span>
                                             </span>
-                                            <figure>
-
-                                            </figure>
-                                            <p class="card-text d-flex flex-column text-center">
-                                                <img src="https://fakeimg.pl/300x100/00ffff">
-                                            <div class="container">
-                                                <ul class="list-group">
-                                                    <li class="list-group-item list-group-item-secondary">News item 1
-                                                    </li>
-                                                    <li class="list-group-item list-group-item-secondary">News item 1
-                                                    </li>
-                                                    <li class="list-group-item list-group-item-secondary">News item 1
-                                                    </li>
-                                                </ul>
+                                            <div class="card-body d-flex flex-column text-center">
+                                                <img src="https://fakeimg.pl/300x100/00ffff" style="margin-left: -2rem; margin-right: -2rem;">
+                                                <div class="container pt-3">
+                                                    <ul class="list-group">
+                                                        <li class="list-group-item list-group-item-secondary">News item 1
+                                                        </li>
+                                                        <li class="list-group-item list-group-item-secondary">News item 1
+                                                        </li>
+                                                        <li class="list-group-item list-group-item-secondary">News item 1
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
-                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -386,63 +425,142 @@
                                     <div class="card">
                                         <div class="card-body">
                                             <span class="d-flex flex-row align-items-end">
-                                                <h1 class="card-title display-3">
+                                                <h1 class="card-title display-3 fw-bold" style="color: #00ffff">
                                                     Events
                                                 </h1>
                                                 <span class="badge bg-primary fs-4">
                                                     活動資訊
                                                 </span>
                                             </span>
-                                            <figure>
-
-                                            </figure>
-                                            <p class="card-text d-flex flex-column text-center">
-                                                <img src="https://fakeimg.pl/300x100/00ffff">
-                                            <div class="container">
-                                                <ul class="list-group">
-                                                    <li class="list-group-item list-group-item-secondary">Events item 1
-                                                    </li>
-                                                    <li class="list-group-item list-group-item-secondary">Events item 1
-                                                    </li>
-                                                    <li class="list-group-item list-group-item-secondary">Events item 1
-                                                    </li>
-                                                </ul>
+                                            <div class="card-body d-flex flex-column text-center">
+                                                <img src="https://fakeimg.pl/300x100/00ffff" style="margin-left: -2rem; margin-right: -2rem;">
+                                                <div class="container pt-3">
+                                                    <ul class="list-group">
+                                                        <li class="list-group-item list-group-item-secondary">Events item 1
+                                                        </li>
+                                                        <li class="list-group-item list-group-item-secondary">Events item 1
+                                                        </li>
+                                                        <li class="list-group-item list-group-item-secondary">Events item 1
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
-                                            </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="container pt-5 partners">
-                                <div class="text-center">
-                                    <h1 class="display-4">Our Global Partners</h1>
-                                    <div class="d-flex flex-row justify-content-center align-items-center">
-                                        <figure>
-                                            <img src="./img/logo/IET/IET LOGO.jpg">
-                                        </figure>
-                                        <figure>
-                                            <img src="./img/logo/NUTC/logo.gif">
-                                        </figure>
-                                        <figure>
-                                            <img src="./img/logo/水利方工作室/logo.png">
-                                        </figure>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="page-bottom d-flex justify-content-center" style="padding-top: 10vh;">
-                                <i class="fas fa-angle-double-up" style="font-size: 84px;"></i>
-                            </div>
                         </div>
+                    </div>
+                    <div class="container-fluid know-us-partners" style="margin-top: 10vh;">
+                        <div class="text-center pb-1">
+                            <h1>
+                                Our Global Partners
+                            </h1>
+                        </div>
+                        <div class="row">
+                            <figure class="figure col-12 col-xxl-4">
+                                <img src="./img/logo/IET/IET LOGO.jpg" class="rounded mx-auto d-block" alt="...">
+                            </figure>
+                            <figure class="figure col-12 col-xxl-4">
+                                <img src="./img/logo/NUTC/logo.gif" class="rounded mx-auto d-block" alt="...">
+                            </figure>
+                            <figure class="figure col-12 col-xxl-4">
+                                <img src="./img/logo/水利方工作室/logo.png" class="rounded mx-auto d-block" alt="...">
+                            </figure>
+                        </div>
+                    </div>                        
+                    <div class="page-bottom d-flex justify-content-center" style="padding-top: 10vh;">
+                        <i class="fas fa-angle-double-up" style="font-size: 84px;"></i>
                     </div>
                 </div>
             </div>
         </section>
-        <footer id="footer" class="dark">
-            <div class="container">
+        <footer id="footer" class="bg-dark text-center text-white">
+            <div class="container-fluid p-4">
+                <section class="row">
+                    <div class="col-12 col-sm-6">
+                        <div class="row d-flex flex-column justify-content-center align-items-end">
+                            <div class="col-12 col-sm-8 d-flex flex-column justify-content-center align-items-start">
+                                <div class="Logo d-flex flex-row justify-content-start align-items-center">
+                                    <figure class="logo-icon">
+                                        <img src="./img/logo/IET Oncampus x Taichung Tech/Logo_white.png">
+                                    </figure>
+                                    <div class="logo-content fw-bold">
+                                        <span>IET</span>
+                                        <span>Oncampus</span>
+                                        <br />
+                                        <span><small>x</small></span>
+                                        <span>Taichung Tech</span>
+                                    </div>
+                                </div>
+    
+                                <div class="footer-content d-flex flex-column">
+                                    <div class="d-flex flex-column align-items-start">
+                                        <h5 class="text-uppercase">合作聯繫</h5>
+                                        <p>
+                                            taichungtech.oncampus@gmail.com
+                                        </p>
+                                    </div>
+                                    <div class="d-flex flex-column align-items-start">
+                                        <h5 class="text-uppercase">官方LINE</h5>
+                                        <p>
+                                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                                        </p>
+                                    </div>
+                                    <div class="d-flex flex-column align-items-start">
+                                        <h5 class="text-uppercase">連絡電話</h5>
+                                        <p>
+                                            090000000000
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="row d-flex flex-column justify-content-center align-items-start h-100">
+                            <div class="col-12 col-sm-8 d-flex flex-row justify-content-center align-items-center">
+                                <div class="footer-qrcode d-flex flex-row justify-content-center align-items-center">
+                                    <img src="img/IET_QRCode.png">
+                                </div>
+                                <div class="footer-facebook d-flex justify-content-center align-items-center">
+                                    <div class="fb-page" 
+                                    data-href="https://www.facebook.com/IETxTaichung/" 
+                                    data-tabs="" 
+                                    data-width="400" 
+                                    data-height="300" 
+                                    data-adapt-container-width="false" 
+                                    data-hide-cover="false" 
+                                    data-show-facepile="true">
+                                    <blockquote cite="https://www.facebook.com/IETxTaichung/" class="fb-xfbml-parse-ignore">
+                                        <a href="https://www.facebook.com/IETxTaichung/">
+                                            IET Oncampus x Taichung Tech
+                                        </a>
+                                    </blockquote>
+                                </div>
+                                    <!-- <div class="fb-page" 
+                                        data-href="https://www.facebook.com/IETxTaichung/" 
+                                        data-tabs="IETxTaichung" 
+                                        data-width="" 
+                                        data-height="160" 
+                                        data-small-header="false" 
+                                        data-adapt-container-width="true" 
+                                        data-hide-cover="false" 
+                                        data-show-facepile="false">
+                                        <blockquote cite="https://www.facebook.com/IETxTaichung/" class="fb-xfbml-parse-ignore">
+                                            <a href="https://www.facebook.com/IETxTaichung/">
+                                                IET Oncampus x Taichung Tech
+                                            </a>
+                                        </blockquote>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
-            <div id="copyrights">
-                <div class="container">
-                </div>
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                ©2021 by IET Oncampus x Taichung Tech 
             </div>
         </footer>
     </div>
