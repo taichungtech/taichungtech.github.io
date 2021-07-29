@@ -98,23 +98,28 @@
         }
 
         .home-icon .fb {
-            -webkit-text-fill-color: transparent;
-            background:
-                -webkit-linear-gradient(270deg, rgb(25, 175, 255), rgb(0, 99, 225));
-            -webkit-background-clip: text;
+            background-color: transparent;
+            -webkit-text-fill-color: white;
+            -webkit-background-clip: unset;
             opacity: 0.8;
         }
 
         .home-icon .fb:hover {
-            -webkit-text-fill-color: white;
+            -webkit-text-fill-color: transparent;
             background:
                 -webkit-linear-gradient(270deg, rgb(25, 175, 255), rgb(0, 99, 225));
-
-            -webkit-background-clip: unset;
+            -webkit-background-clip: text;
             opacity: 1;
         }
 
         .home-icon .ig {
+            background-color: transparent;
+            -webkit-text-fill-color: white;
+            -webkit-background-clip: unset;
+            opacity: 0.8;
+        }
+
+        .home-icon .ig:hover {
             -webkit-text-fill-color: transparent;
             background:
                 /* Use radial gradients to get the rounded */
@@ -146,41 +151,6 @@
                     #f77638 70%,
                     #fec66d 100%);
             -webkit-background-clip: text;
-            opacity: 0.8;
-        }
-
-        .home-icon .ig:hover {
-            -webkit-text-fill-color: white;
-            background:
-                /* Use radial gradients to get the rounded */
-                /* gradient effect in each corner */
-                /* left bottom */
-                radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%),
-                radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%),
-                /* left top */
-                radial-gradient(ellipse farthest-corner at 0 -25%,
-                    #5258cf,
-                    transparent 50%),
-                radial-gradient(ellipse farthest-corner at 20% -50%,
-                    #5258cf,
-                    transparent 50%),
-                /* right top */
-                radial-gradient(ellipse farthest-corner at 100% 0,
-                    #893dc2,
-                    transparent 50%),
-                radial-gradient(ellipse farthest-corner at 60% -20%,
-                    #893dc2,
-                    transparent 50%),
-                /* right bottom */
-                radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent),
-                /* create a base coat to smooth
-                corner gradients */
-                linear-gradient(#6559ca,
-                    #bc318f 30%,
-                    #e33f5f 50%,
-                    #f77638 70%,
-                    #fec66d 100%);
-            -webkit-background-clip: unset;
             opacity: 1;
         }
 
@@ -369,7 +339,9 @@
                     </div>
                     <div class="home-icon d-flex flex-column justify-content-center align-items-center">
                         <button class="fb">
-                            <i class="fab fa-facebook"></i>
+                            <a class="link-light" href="https://www.facebook.com/IETxTaichung/" target="_blank">
+                                <i class="fab fa-facebook"></i>
+                            </a>
                         </button>
                         <button class="ig">
                             <i class="fab fa-instagram"></i>
@@ -520,7 +492,7 @@
                         </div>
                     </div>                        
                     <div class="page-bottom d-flex justify-content-center" style="padding-top: 10vh;">
-                        <i class="bi bi-arrow-up" style="font-size: 84px;"></i>
+                        <a href="#"><i class="bi bi-arrow-up" style="font-size: 84px;"></i></a>
                     </div>
                 </div>
             </div>
