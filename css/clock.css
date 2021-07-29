@@ -1,15 +1,15 @@
 .clock{
     position: absolute;
-    width: 50em;
-    height: 50em;
+    width: 43em;
+    height: 43em;
     z-index: 0;
-    /* background-color: rgba(255 , 255  , 255, 0.5); */
     border-radius: 50%;
-    box-shadow: 0 -20px 15px rgba(255, 255, 255, 0.3),
+    /* background-color: rgba(255 , 255  , 255, 0.5); */
+    /* box-shadow: 0 -20px 15px rgba(255, 255, 255, 0.3),
                 inset   0   -15px 15px rgba(255, 255, 255, 0.05),
                 0 15px 15px rgba(0, 0, 0, 0.3),
                 inset 0 15px 15px rgba(0, 0, 0, 0.05),
-                50px 0 50px -15px rgba(145 ,140 ,140 ,30%);
+                50px 0 50px -15px rgba(145 ,140 ,140 ,30%); */
 }
 .dot{
     position: absolute;
@@ -22,40 +22,66 @@
 }
 .hour{
     --rotation:0;
-    --bot-margin:50%;
-    --left-margin:50%;
     position: absolute;
-    bottom: var(--bot-margin);
-    left: var(--left-margin);
+    bottom: 50%;
+    left: 50%;
     width: 5px;
-    height: 10%;
+    height: 50%;
     text-align: center;
     transform-origin: bottom;
     transform: translateX(-50%) rotate(var(--rotation));
-    background-color: white;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0) 80%, rgba(255,255,255,1) 80%,rgba(255,255,255,1) 100%,rgba(255,255,255,0) 100%);
+}
+
+.hour:hover{
+    background-color: rgb(165, 255, 238);
+    background: linear-gradient(to top, rgba(255, 255, 255, 0) 80%, rgba(165, 255, 238,1) 80%,rgba(165, 255, 238,1) 100%,rgba(255,255,255,0) 100%);
+
 }
 .hour12{
     --rotation: 0deg;
-    --bot-margin: 90%;
-    --left-margin: 50%;
+}
+.hour1{
+    --rotation: 30deg;
+}
+/* .hour1::before{
+    position: relative;
+    left: 10px;
+    content: '關於社群';
+    color: white;
+    left: 10px;
+} */
+.hour2{
+    --rotation: 60deg;
 }
 .hour3{
     --rotation: 90deg;
-    --bot-margin: 50%;
-    --left-margin: 90%;
+}
+.hour4{
+    --rotation: 120deg;
+}
+.hour5{
+    --rotation: 150deg;
 }
 .hour6{
     --rotation: 180deg;
-    --bot-margin: 10%;
-    --left-margin: 50%;
+}
+.hour7{
+    --rotation: 210deg;
+}
+.hour8{
+    --rotation: 240deg;
 }
 .hour9{
     --rotation: 270deg;
-    --bot-margin: 50%;
-    --left-margin: 10%;
 }
-
-.hand{
+.hour10{
+    --rotation: 300deg;
+}
+.hour11{
+    --rotation: 330deg;
+}
+.mintue{
     position: absolute;
     bottom: 50%;
     left: 50%;
@@ -63,22 +89,26 @@
     height: 40%;
     background-color: white;
     transform-origin: bottom;
-    transform: rotate(90deg);
+    transform: rotate(0deg);
     /* border-radius: 10px; */
+    /* padding-left: -5px; */
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    transition: all 0.2s;
 }
-.mintue{
+.hand{
     position: absolute;
     bottom: 50%;
     left: calc(50% - 5px);
     width: 10px;
     height: 20%;
+    padding-left: -5px;
     background-color: white;
     transform-origin: bottom;
-    transform: rotate(30deg);
+    transform: rotate(0deg);
     /* border-radius: 10px; */
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-
+    transition: all 0.2s;
 }
+

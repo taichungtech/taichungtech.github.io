@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: #2ec194;
+        }
+
+        .dd {
+            position: relative;
+        }
+
+        .logo {
+            width: 500px;
+            height: 500px;
+            margin: 200px;
+            background: royalblue;
+        }
+
+        .logo::after {
+            content: '456';
+            position: absolute;
+            bottom: -50px;
+            left: 5%;
+            width: 90%;
+            height: 20px;
+            background: rgb(247, 7, 7);
+            border-radius: 50%;
+            z-index: -1;
+            filter: blur(10px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dd">
+
+        <div class="logo">123</div>
+    </div>
+</body>
+
+</html>
