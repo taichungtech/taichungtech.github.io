@@ -1,7 +1,12 @@
 .clock{
     position: absolute;
+<<<<<<< HEAD
     width: 43em;
     height: 43em;
+=======
+    width: 45vw;
+    height: 45vw;
+>>>>>>> d01a60f4180563ec7a282ad51296af5eb96648f6
     z-index: 0;
     border-radius: 50%;
     /* background-color: rgba(255 , 255  , 255, 0.5); */
