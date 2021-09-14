@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IET Oncampus - Home</title>
+    <title>活動資訊 - IET Oncampus</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo:wght@900&display=swap" rel="stylesheet">
@@ -154,8 +154,9 @@
             opacity: 1;
         }
 
-        .about-us-page {
-            padding-top: 25vh;
+        .news-page {
+            height: 100vh;
+            min-height: 100vh;
             background-image: linear-gradient(180deg,
                     rgb(0, 14, 42) 0%,
                     #000000 10%,
@@ -184,15 +185,36 @@
             padding-right: 10px;
         }
 
-        .know-us-page {
-            padding-top: 15vh;
+        .news-cards-page {
+            
+            /* height: 100vh; */
+            /* max-height: 100vh; */
+            padding: 1vh 1vw;
             background-image: linear-gradient(180deg,
                     rgb(0, 24, 72) 0%,
                     rgb(31, 78, 121) 50%,
                     rgb(188, 215, 238));
         }
 
-        .know-us-card .card {
+        .news-cards-page .container-fluid {
+            width: 75vw;
+            padding: 10vh 0;
+        }
+
+        .news-cards-page .card-title {
+            border-bottom: 1px solid #fff;
+        }
+
+        .news-cards-page .col .card {
+            min-height: 40vh;
+            background-color: #7F7F7F;
+        }
+
+        .news-cards-page .col .card:nth-of-type(2n+2) {
+            background-color: #28467C;
+        }
+
+        .news-content .card {
             border-radius: 0;
             background-color: rgb(127, 127, 127);
             box-shadow: 0px 0px 10px 4px rgb(0, 24, 72);
@@ -265,6 +287,37 @@
             color: black;
             background-color: #a5ffee;
         }
+
+        .team {
+            background-color: #7F7F7F;
+            /* box-shadow: 0px 0px 15px 5px #0e0e0e; */
+            box-shadow: 10px 0px 5px 2px #00000075,
+            -10px 0px 5px 2px #00000075;
+        }
+
+        .team-items {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center;
+        }
+
+        .team-items .card {
+            background-color: transparent;
+            border: 0;
+            width: 200px;
+        }
+
+        .btn-white-inline {
+            color: white;
+            background-color: transparent;
+            border-color: white;
+        }
+
+        .btn-white-inline:hover {
+            color: black;
+            background-color: white;
+        }
     </style>
 
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v11.0" nonce="VCAtdjmH"></script>
@@ -275,7 +328,6 @@
         <div id="fb-root"></div>
         <div id="stars"></div>
         <div id="stars2"></div>
-        <div id="stars3"></div>
         <nav id="header" class="navbar navbar-expand fixed-top text-white pt-3 navbar-text h4">
             <div class="container-fluid">
                 <div class="row justify-content-between align-items-center navbar-content">
@@ -298,11 +350,6 @@
                             <li class="nav-item">
                                 <a class="nav-link link-light" href="./News.html">活動資訊</a>
                                 <div class="nav-link-background"></div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link link-light disabled" href="#" tabindex="-1"
-                                    aria-disabled="true">敬請期待</a>
-                                    <div class="nav-link-background"></div>
                             </li>
                         </ul>
                         <div class="nav-pills-background"></div>
@@ -348,146 +395,82 @@
                         </button>
                     </div>
                 </div>
-                <div id="scrollspyAboutUs" class="about-us-page">
+                <div id="scrollspyAboutUs" class="news-page">
                     <div class="container h-100 pt-5 d-flex flex-column justify-content-center">
                         <div class="text-white">
-                            <h1 class="display-3 fw-bolder pb-4 ps-1">About</h1>
-                            <h2 class="display-5 pb-2 ps-1">關於社群</h2>
-                            <p class=" lead d-flex flex-column py-3 ps-4">
-                                <span class="pb-4">
-                                    國際工程與科技學會（Institution of Engineering and Technology，IET），為國際知名的電子電機領域之工程學術機構。
-                                    Oncampus 是 IET
-                                    當前大力推動的校園推廣計畫，其目標是招募對於科技、工程等領域有興趣的學生組成社團並以永續經營方式在校園舉辦各種科技分享活動並積極結合業界與國際資源培育學生來提升其職能與國際化程度。
-                                </span>
-                                <span>
-                                    發源於國立臺中科技大學的 IET Oncampus x Taichung Tech 是臺灣第一個 IET Oncampus 社群。本社群期望能夠成為中部地區最活躍的技術開放社群，並且以人工智慧、物聯網、雲端技術以及網站、APP 開發等技術主軸結合至人文、商業與設計等等領域，應用或共同發想解決 SDGs 之 17 項議題為本社團舉辦小聚分享的主要核心。
-                                </span>
-                            </p>
-                        </div>
-                    </div>
-                    <!-- <div class="container-fluid">
-                        <div class="about-us-images d-flex flex-row justify-content-center align-items-center">
-                            <figure class="figure">
-                                <img src="./img/20210419.jpg" class="rounded mx-auto d-block" alt="...">
-                            </figure>
-                            <figure class="figure pt-5">
-                                <img src="./img/microbit_1.jpg" class="rounded mx-auto d-block" alt="...">
-                            </figure>
-                            <figure class="figure pt-2">
-                                <img src="./img/microbit_2.jpg" class="rounded mx-auto d-block" alt="...">
-                            </figure>
-                        </div>
-                    </div> -->
-                    <div class="container-fluid about-us-images">
-                        <div class="row">
-                            <div class="figure col-12 col-xxl-4">
-                                <img src="./img/20210419.jpg" class="rounded mx-auto d-block" alt="...">
-                            </div>
-                            <div class="figure col-12 col-xxl-4">
-                                <img src="./img/microbit_1.jpg" class="rounded mx-auto d-block" alt="...">
-                            </div>
-                            <div class="figure col-12 col-xxl-4">
-                                <img src="./img/microbit_2.jpg" class="rounded mx-auto d-block" alt="...">
+                            <div class="text-center">
+                                <h1 class="display-3 fw-bolder">News</h1>
+                                <h2 class="display-5">最新消息</h2>
+                                <div class="row news-content pt-4 text-center" style="font-size: 24px;">
+                                    <p>
+                                        活動主題分四個部分，產業實務分享、社團課程、專業課程及社群分享。
+                                    </p>
+                                    <p>
+                                        台灣 STEAM 教學資源平台於 2021 年 5 月 12 日在國立臺中科技大學與謝俊宏校長、語文學院邱學瑾院長、教學資源中心林文彥主任等多位貴賓及熱血夥伴的共同見證下，正式完成簽署 MOU 及揭牌儀式。並且於 2021 年 6 月 3 日舉行了科技英文師培線上說明會!!
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div id="scrollspyKnowUs" class="know-us-page">
-                    <div class="container h-100 pt-5 d-flex flex-column justify-content-center">
-                        <div class="text-white">
-                            <h1 class="display-3 fw-bolder pb-4 ps-1">Target</h1>
-                            <h2 class="display-5 pb-2 ps-1">社群目標</h2>
-                            <p class=" lead d-flex flex-column py-3 ps-4">
-                                <span class="pb-4">
-                                    本社群理念為分享科技領域的資訊、招募各領域且對科技領域有興趣的學生組成社群，並以永續經營方式在校園舉辦各種科技分享活動並積極結合業界與國際資源培育學生來提升其職能與國際化程度。
-                                </span>
-                            </p>
-                            <div class="row know-us-card pt-4">
-                                <div class="col-sm-6 pt-2">
-                                    <div class="card">
+                <div id="scrollspyKnowUs" class="news-cards-page">
+                    <div class="news-cards">
+                        <div class="container-fluid d-flex flex-column justify-content-center">
+                            <div class="row row-cols-1 row-cols-md-2 g-4 text-white">
+                                <div class="col">
+                                    <div class="card" style="background-color: #28467C;">
                                         <div class="card-body">
-                                            <span class="d-flex flex-row align-items-end">
-                                                <h1 class="card-title display-3 fw-bold" style="color: #00ffff">
-                                                    News
-                                                </h1>
-                                                <span class="badge fs-4">
-                                                    最新消息
-                                                </span>
-                                            </span>
-                                            <div class="card-body d-flex flex-column text-center">
-                                                <img src="https://fakeimg.pl/300x100/00ffff" style="margin-left: -2rem; margin-right: -2rem;">
-                                                <div class="container pt-3">
-                                                    <ul class="list-group">
-                                                        <li class="list-group-item list-group-item-secondary">News item 1
-                                                        </li>
-                                                        <li class="list-group-item list-group-item-secondary">News item 1
-                                                        </li>
-                                                        <li class="list-group-item list-group-item-secondary">News item 1
-                                                        </li>
-                                                    </ul>
+                                            <h5 class="card-title d-flex justify-content-between">
+                                                <span class="display-4 fw-bold">產業實務分享</span>
+                                                <div class="d-flex flex-column justify-content-end p-2">
+                                                    <button type="button" class="btn btn-white-inline btn-sm">more</button>
                                                 </div>
-                                            </div>
+                                            </h5>
+                                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-sm-6 pt-2">
-                                    <div class="card">
+                                <div class="col">
+                                    <div class="card" style="background-color: #7F7F7F;">
                                         <div class="card-body">
-                                            <span class="d-flex flex-row align-items-end">
-                                                <h1 class="card-title display-3 fw-bold" style="color: #00ffff">
-                                                    Events
-                                                </h1>
-                                                <span class="badge fs-4">
-                                                    活動資訊
-                                                </span>
-                                            </span>
-                                            <div class="card-body d-flex flex-column text-center">
-                                                <img src="https://fakeimg.pl/300x100/00ffff" style="margin-left: -2rem; margin-right: -2rem;">
-                                                <div class="container pt-3">
-                                                    <ul class="list-group">
-                                                        <li class="list-group-item list-group-item-secondary">Events item 1
-                                                        </li>
-                                                        <li class="list-group-item list-group-item-secondary">Events item 1
-                                                        </li>
-                                                        <li class="list-group-item list-group-item-secondary">Events item 1
-                                                        </li>
-                                                    </ul>
+                                            <h5 class="card-title d-flex justify-content-between">
+                                                <span class="display-4 fw-bold">社團課程</span>
+                                                <div class="d-flex flex-column justify-content-end p-2">
+                                                    <button type="button" class="btn btn-white-inline btn-sm">more</button>
                                                 </div>
-                                            </div>
+                                            </h5>
+                                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card" style="background-color: #7F7F7F;">
+                                        <div class="card-body">
+                                            <h5 class="card-title d-flex justify-content-between">
+                                                <span class="display-4 fw-bold">專業課程</span>
+                                                <div class="d-flex flex-column justify-content-end p-2">
+                                                    <button type="button" class="btn btn-white-inline btn-sm">more</button>
+                                                </div>
+                                            </h5>
+                                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card" style="background-color: #28467C;">
+                                        <div class="card-body">
+                                            <h5 class="card-title d-flex justify-content-between">
+                                                <span class="display-4 fw-bold">社群分享</span>
+                                                <div class="d-flex flex-column justify-content-end p-2">
+                                                    <button type="button" class="btn btn-white-inline btn-sm">more</button>
+                                                </div>
+                                            </h5>
+                                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="container-fluid know-us-partners" style="margin-top: 10vh;">
-                        <div class="text-center pb-1">
-                            <h1>
-                                Our Global Partners
-                            </h1>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 col-xxl-4 px-5 d-flex justify-content-center align-items-center">
-                                <figure class="figure rounded">
-                                    <img src="./img/logo/IET/IET LOGO.jpg" class="rounded mx-auto d-block" alt="...">
-                                </figure>
-                            </div>
-
-                            <div class="col-12 col-xxl-4 px-5 d-flex justify-content-center align-items-center">
-                                <figure class="figure rounded">
-                                    <img src="./img/logo/NUTC/台中科技大學logo.gif" class="rounded mx-auto d-block" alt="...">
-                                </figure>
-                            </div>
-
-                            <div class="col-12 col-xxl-4 px-5 d-flex justify-content-center align-items-center">
-                                <figure class="figure rounded">
-                                    <img src="./img/logo/水利方工作室/logo.png" class="rounded mx-auto d-block" alt="...">
-                                </figure>
-                            </div>
-                        </div>
-                    </div>                        
-                    <div class="page-bottom d-flex justify-content-center" style="padding-top: 10vh;">
-                        <a href="#"><i class="bi bi-arrow-up" style="font-size: 84px;"></i></a>
                     </div>
                 </div>
             </div>

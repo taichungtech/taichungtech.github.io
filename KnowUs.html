@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IET Oncampus - Home</title>
+    <title>認識我們 - IET Oncampus</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo:wght@900&display=swap" rel="stylesheet">
@@ -154,8 +154,9 @@
             opacity: 1;
         }
 
-        .about-us-page {
-            padding-top: 25vh;
+        .tutorial-page {
+            height: 100vh;
+            min-height: 100vh;
             background-image: linear-gradient(180deg,
                     rgb(0, 14, 42) 0%,
                     #000000 10%,
@@ -184,8 +185,10 @@
             padding-right: 10px;
         }
 
-        .know-us-page {
-            padding-top: 15vh;
+        .team-page {
+            /* height: 100vh; */
+            /* max-height: 100vh; */
+            padding-top: 11vh;
             background-image: linear-gradient(180deg,
                     rgb(0, 24, 72) 0%,
                     rgb(31, 78, 121) 50%,
@@ -265,6 +268,26 @@
             color: black;
             background-color: #a5ffee;
         }
+
+        .team {
+            background-color: #7F7F7F;
+            /* box-shadow: 0px 0px 15px 5px #0e0e0e; */
+            box-shadow: 10px 0px 5px 2px #00000075,
+            -10px 0px 5px 2px #00000075;
+        }
+
+        .team-items {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center;
+        }
+
+        .team-items .card {
+            background-color: transparent;
+            border: 0;
+            width: 200px;
+        }
     </style>
 
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v11.0" nonce="VCAtdjmH"></script>
@@ -275,7 +298,6 @@
         <div id="fb-root"></div>
         <div id="stars"></div>
         <div id="stars2"></div>
-        <div id="stars3"></div>
         <nav id="header" class="navbar navbar-expand fixed-top text-white pt-3 navbar-text h4">
             <div class="container-fluid">
                 <div class="row justify-content-between align-items-center navbar-content">
@@ -298,11 +320,6 @@
                             <li class="nav-item">
                                 <a class="nav-link link-light" href="./News.html">活動資訊</a>
                                 <div class="nav-link-background"></div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link link-light disabled" href="#" tabindex="-1"
-                                    aria-disabled="true">敬請期待</a>
-                                    <div class="nav-link-background"></div>
                             </li>
                         </ul>
                         <div class="nav-pills-background"></div>
@@ -348,120 +365,64 @@
                         </button>
                     </div>
                 </div>
-                <div id="scrollspyAboutUs" class="about-us-page">
+                <div id="scrollspyAboutUs" class="tutorial-page">
                     <div class="container h-100 pt-5 d-flex flex-column justify-content-center">
                         <div class="text-white">
-                            <h1 class="display-3 fw-bolder pb-4 ps-1">About</h1>
-                            <h2 class="display-5 pb-2 ps-1">關於社群</h2>
-                            <p class=" lead d-flex flex-column py-3 ps-4">
-                                <span class="pb-4">
-                                    國際工程與科技學會（Institution of Engineering and Technology，IET），為國際知名的電子電機領域之工程學術機構。
-                                    Oncampus 是 IET
-                                    當前大力推動的校園推廣計畫，其目標是招募對於科技、工程等領域有興趣的學生組成社團並以永續經營方式在校園舉辦各種科技分享活動並積極結合業界與國際資源培育學生來提升其職能與國際化程度。
-                                </span>
-                                <span>
-                                    發源於國立臺中科技大學的 IET Oncampus x Taichung Tech 是臺灣第一個 IET Oncampus 社群。本社群期望能夠成為中部地區最活躍的技術開放社群，並且以人工智慧、物聯網、雲端技術以及網站、APP 開發等技術主軸結合至人文、商業與設計等等領域，應用或共同發想解決 SDGs 之 17 項議題為本社團舉辦小聚分享的主要核心。
-                                </span>
-                            </p>
-                        </div>
-                    </div>
-                    <!-- <div class="container-fluid">
-                        <div class="about-us-images d-flex flex-row justify-content-center align-items-center">
-                            <figure class="figure">
-                                <img src="./img/20210419.jpg" class="rounded mx-auto d-block" alt="...">
-                            </figure>
-                            <figure class="figure pt-5">
-                                <img src="./img/microbit_1.jpg" class="rounded mx-auto d-block" alt="...">
-                            </figure>
-                            <figure class="figure pt-2">
-                                <img src="./img/microbit_2.jpg" class="rounded mx-auto d-block" alt="...">
-                            </figure>
-                        </div>
-                    </div> -->
-                    <div class="container-fluid about-us-images">
-                        <div class="row">
-                            <div class="figure col-12 col-xxl-4">
-                                <img src="./img/20210419.jpg" class="rounded mx-auto d-block" alt="...">
-                            </div>
-                            <div class="figure col-12 col-xxl-4">
-                                <img src="./img/microbit_1.jpg" class="rounded mx-auto d-block" alt="...">
-                            </div>
-                            <div class="figure col-12 col-xxl-4">
-                                <img src="./img/microbit_2.jpg" class="rounded mx-auto d-block" alt="...">
+                            <div class="text-center">
+                                <h1 class="display-3 fw-bolder">News</h1>
+                                <h2 class="display-5">最新消息</h2>
+                                <div class="row know-us-card pt-4">
+                                    <div class="col-sm-6 pt-2">
+                                        <div class="card">
+                                            <div class="card-body d-flex flex-column text-center">
+                                                <div class="card-body-img" style="height: 350px;">
+                                                    <img src="https://jiaweichang.github.io/biography/img/mockup/jwchang.jpg" class="card-img-top" alt="張家瑋 Jia-Wei Chang" style="width: auto; height: auto; max-width: 100%; max-height: 100%;">
+                                                </div>
+                                                <div class="container pt-3">
+                                                    <h5 class="card-title">
+                                                        國立臺中科技大學資訊工程系-張家瑋老師
+                                                    </h5>
+                                                    <p class="card-text">
+                                                        信箱：jwchang@nutc.edu.tw
+                                                        <br/>
+                                                        專長：Natural language processing, Internet of things, Artificial intelligence, E-learning technologies.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 pt-2">
+                                        <div class="card">
+                                            <div class="card-body d-flex flex-column text-center">
+                                                <div class="card-body-img" style="height: 350px;">
+                                                    <img src="https://fakeimg.pl/258x350/ff0000/" class="card-img-top" alt="張家瑋 Jia-Wei Chang" style="width: auto; height: auto; max-width: 100%; max-height: 100%;">
+                                                </div>
+                                                <div class="container pt-3">
+                                                    <h5 class="card-title">
+                                                        國立臺中科技大學語文學院-蒲盈宏老師
+                                                    </h5>
+                                                    <p class="card-text">
+                                                        信箱：yhpu@nutc.edu.tw
+                                                        <br/>
+                                                        專長：數位學習、電子商務、數位行銷、大數據資料應用、物聯網實務與應用
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div id="scrollspyKnowUs" class="know-us-page">
-                    <div class="container h-100 pt-5 d-flex flex-column justify-content-center">
-                        <div class="text-white">
-                            <h1 class="display-3 fw-bolder pb-4 ps-1">Target</h1>
-                            <h2 class="display-5 pb-2 ps-1">社群目標</h2>
-                            <p class=" lead d-flex flex-column py-3 ps-4">
-                                <span class="pb-4">
-                                    本社群理念為分享科技領域的資訊、招募各領域且對科技領域有興趣的學生組成社群，並以永續經營方式在校園舉辦各種科技分享活動並積極結合業界與國際資源培育學生來提升其職能與國際化程度。
-                                </span>
-                            </p>
-                            <div class="row know-us-card pt-4">
-                                <div class="col-sm-6 pt-2">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <span class="d-flex flex-row align-items-end">
-                                                <h1 class="card-title display-3 fw-bold" style="color: #00ffff">
-                                                    News
-                                                </h1>
-                                                <span class="badge fs-4">
-                                                    最新消息
-                                                </span>
-                                            </span>
-                                            <div class="card-body d-flex flex-column text-center">
-                                                <img src="https://fakeimg.pl/300x100/00ffff" style="margin-left: -2rem; margin-right: -2rem;">
-                                                <div class="container pt-3">
-                                                    <ul class="list-group">
-                                                        <li class="list-group-item list-group-item-secondary">News item 1
-                                                        </li>
-                                                        <li class="list-group-item list-group-item-secondary">News item 1
-                                                        </li>
-                                                        <li class="list-group-item list-group-item-secondary">News item 1
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 pt-2">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <span class="d-flex flex-row align-items-end">
-                                                <h1 class="card-title display-3 fw-bold" style="color: #00ffff">
-                                                    Events
-                                                </h1>
-                                                <span class="badge fs-4">
-                                                    活動資訊
-                                                </span>
-                                            </span>
-                                            <div class="card-body d-flex flex-column text-center">
-                                                <img src="https://fakeimg.pl/300x100/00ffff" style="margin-left: -2rem; margin-right: -2rem;">
-                                                <div class="container pt-3">
-                                                    <ul class="list-group">
-                                                        <li class="list-group-item list-group-item-secondary">Events item 1
-                                                        </li>
-                                                        <li class="list-group-item list-group-item-secondary">Events item 1
-                                                        </li>
-                                                        <li class="list-group-item list-group-item-secondary">Events item 1
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div id="scrollspyKnowUs" class="team-page">
+                    <div class="container h-100 pt-5 d-flex flex-column justify-content-center text-white">
+                        <h1 class="display-3 text-center fw-bolder">Team</h1>
+                        <h2 class="display-5 text-center">社團成員</h2>
+                        <div class="team-items d-flex flex-column"></div>
                     </div>
                     <div class="container-fluid know-us-partners" style="margin-top: 10vh;">
-                        <div class="text-center pb-1">
+                        <div class="text-center text-white pb-1">
                             <h1>
                                 Our Global Partners
                             </h1>
@@ -584,6 +545,122 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+    <script>
+        var team_list = [
+            {
+                "name": "總召組",
+                "member": [
+                    {
+                        "title": "總召",
+                        "name": "陳威呈"
+                    },
+                    {
+                        "title": "副總召",
+                        "name": "洪敏嫻"
+                    },
+                ]
+            },
+            {
+                "name": "顧問組",
+                "member": [
+                    {
+                        "title": "故摁組組長",
+                        "name": "朱庭宏"
+                    },
+                ]
+            },
+            {
+                "name": "活動議程組",
+                "member": [
+                    {
+                        "title": "故摁組組長",
+                        "name": "賴逸齊"
+                    },
+                ]
+            },
+            {
+                "name": "行銷公關組組長",
+                "member": [
+                    {
+                        "title": "行銷公關組組長",
+                        "name": "王裕民"
+                    },
+                ]
+            },
+            {
+                "name": "場務組",
+                "member": [
+                    {
+                        "title": "場務組組長",
+                        "name": "胡忠雲"
+                    },
+                ]
+            },
+            {
+                "name": "活動紀錄組",
+                "member": [
+                    {
+                        "title": "活動紀錄組組長",
+                        "name": "林孟萱"
+                    },
+                ]
+            },
+            {
+                "name": "網站開發組",
+                "member": [
+                    {
+                        "title": "網站開發組組長",
+                        "name": "廖柏彥"
+                    },
+                ]
+            },
+            {
+                "name": "文創設計組",
+                "member": [
+                    {
+                        "title": "文創設計組組長",
+                        "name": "張芮慈"
+                    },
+                ]
+            },
+            {
+                "name": "行政暨財務組組長",
+                "member": [
+                    {
+                        "title": "行政暨財務組組長",
+                        "name": "紀昀彤"
+                    },
+                ]
+            }
+        ]
+        window.addEventListener("DOMContentLoaded", () => {
+            let Team = document.querySelector("#scrollspyKnowUs > div.container.h-100.pt-5.d-flex.flex-column.justify-content-center.text-white > div");
+            Team.innerHTML = "";
+            team_list.map((team) => {
+                console.log(team);
+                let dTeam = document.createElement("div");
+                dTeam.className = "team col-12 m-3 p-2";
+                dTeam.innerHTML = `<div class="team-title" style="color: #A5FFEE;"><h2>${team.name}</h2></div>`;
+                let dTeamItem = document.createElement("div");
+                dTeamItem.className = "team-items";
+                team['member'].map((member) => {
+                    let dMember = document.createElement("div")
+                    dMember.className = "card d-flex align-items-center text-center mx-4";
+                    dMember.innerHTML = `<div class="card-img" style="width: 100px; height: 100px;">
+                                            <img src="https://fakeimg.pl/100x100/0000ff/" class="card-img-top" alt="..." style="width: auto; height: auto; max-width: 100%; max-height: 100%;">
+                                        </div>
+
+                                        <div class="card-body">
+                                            <h5 class="card-title">${member.title}</h5>
+                                            <p class="card-text">${member.name}</p>
+                                        </div>`;
+                    dTeamItem.appendChild(dMember)
+                })
+                dTeam.appendChild(dTeamItem);
+                Team.appendChild(dTeam);
+            })
+        })
+    </script>
 </body>
 
 </html>
