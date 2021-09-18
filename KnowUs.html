@@ -170,7 +170,7 @@
 
         .about-us-images {
             margin-top: 10vh;
-            
+
         }
         .about-us-images .row {
             background-image: linear-gradient(to bottom,
@@ -202,7 +202,7 @@
         }
 
         .know-us-partners figure {
-            border-width: 2px; 
+            border-width: 2px;
             /* border-style: solid; */
             border-color: #fff;
             padding: 5px;
@@ -210,7 +210,7 @@
 
         .know-us-partners img {
             padding: 10px;
-            
+
             background-color: #fff;
             height: 120px;
         }
@@ -234,7 +234,7 @@
         .footer-facebook {
             min-height: 400px;
             min-width: 300px;
-            
+
         }
 
         #footer {
@@ -336,13 +336,21 @@
             <div class="content-wrap">
                 <div id="scrollspyHome" class="home-page d-flex justify-content-center align-items-center">
                     <div class="clock">
-                        <div class="hand"></div>
                         <div class="dot"></div>
+                        <div class="hand"></div>
                         <div class="mintue"></div>
                         <div class="hour hour12"></div>
+                        <div class="hour hour1"></div>
+                        <div class="hour hour2"></div>
                         <div class="hour hour3"></div>
+                        <div class="hour hour4"></div>
+                        <div class="hour hour5"></div>
                         <div class="hour hour6"></div>
+                        <div class="hour hour7"></div>
+                        <div class="hour hour8"></div>
                         <div class="hour hour9"></div>
+                        <div class="hour hour10"></div>
+                        <div class="hour hour11"></div>
                     </div>
                     <div class="container">
                         <div class="text-center text-white">
@@ -446,7 +454,7 @@
                                 </figure>
                             </div>
                         </div>
-                    </div>                        
+                    </div>
                     <div class="page-bottom d-flex justify-content-center" style="padding-top: 10vh;">
                         <a href="#"><i class="bi bi-arrow-up" style="font-size: 84px;"></i></a>
                     </div>
@@ -471,7 +479,7 @@
                                         <span>Taichung Tech</span>
                                     </div>
                                 </div>
-    
+
                                 <div class="footer-content d-flex flex-column">
                                     <div class="d-flex flex-column align-items-start">
                                         <h5 class="text-uppercase">合作聯繫</h5>
@@ -502,13 +510,13 @@
                                     <img src="img/IET_QRCode.png">
                                 </div>
                                 <div class="footer-facebook d-flex justify-content-center align-items-center">
-                                    <div class="fb-page" 
-                                    data-href="https://www.facebook.com/IETxTaichung/" 
-                                    data-tabs="" 
-                                    data-width="360" 
-                                    data-height="300" 
-                                    data-adapt-container-width="false" 
-                                    data-hide-cover="false" 
+                                    <div class="fb-page"
+                                    data-href="https://www.facebook.com/IETxTaichung/"
+                                    data-tabs=""
+                                    data-width="360"
+                                    data-height="300"
+                                    data-adapt-container-width="false"
+                                    data-hide-cover="false"
                                     data-show-facepile="true">
                                     <blockquote cite="https://www.facebook.com/IETxTaichung/" class="fb-xfbml-parse-ignore">
                                         <a href="https://www.facebook.com/IETxTaichung/">
@@ -516,14 +524,14 @@
                                         </a>
                                     </blockquote>
                                 </div>
-                                    <!-- <div class="fb-page" 
-                                        data-href="https://www.facebook.com/IETxTaichung/" 
-                                        data-tabs="IETxTaichung" 
-                                        data-width="" 
-                                        data-height="160" 
-                                        data-small-header="false" 
-                                        data-adapt-container-width="true" 
-                                        data-hide-cover="false" 
+                                    <!-- <div class="fb-page"
+                                        data-href="https://www.facebook.com/IETxTaichung/"
+                                        data-tabs="IETxTaichung"
+                                        data-width=""
+                                        data-height="160"
+                                        data-small-header="false"
+                                        data-adapt-container-width="true"
+                                        data-hide-cover="false"
                                         data-show-facepile="false">
                                         <blockquote cite="https://www.facebook.com/IETxTaichung/" class="fb-xfbml-parse-ignore">
                                             <a href="https://www.facebook.com/IETxTaichung/">
@@ -538,7 +546,7 @@
                 </section>
             </div>
             <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-                ©2021 by IET Oncampus x Taichung Tech 
+                ©2021 by IET Oncampus x Taichung Tech
             </div>
         </footer>
     </div>
@@ -637,7 +645,7 @@
             let Team = document.querySelector("#scrollspyKnowUs > div.container.h-100.pt-5.d-flex.flex-column.justify-content-center.text-white > div");
             Team.innerHTML = "";
             team_list.map((team) => {
-                console.log(team);
+                // console.log(team);
                 let dTeam = document.createElement("div");
                 dTeam.className = "team col-12 m-3 p-2";
                 dTeam.innerHTML = `<div class="team-title" style="color: #A5FFEE;"><h2>${team.name}</h2></div>`;
@@ -660,6 +668,14 @@
                 Team.appendChild(dTeam);
             })
         })
+    setInterval(function () {
+        var time = new Date;
+        var h = time.getHours()
+        var m = time.getMinutes()
+        document.getElementsByClassName("mintue")[0].style.transform = "rotate(" + 6 * m + "deg)";
+        document.getElementsByClassName("hand")[0].style.transform = "rotate(" + (30 * h + m / 2) + "deg)";
+    document.getElementsByClassName('clock')[0].classList='clock clock_show'
+    }, 200)
     </script>
 </body>
 
