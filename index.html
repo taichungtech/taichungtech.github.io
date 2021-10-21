@@ -154,6 +154,35 @@
             opacity: 1;
         }
 
+        .home-icon .line {
+            background-color: transparent;
+            -webkit-text-fill-color: white;
+            -webkit-background-clip: unset;
+            opacity: 0.8;
+        }
+
+        .home-icon .line:hover {
+            -webkit-text-fill-color: transparent;
+            background:
+                -webkit-linear-gradient(270deg, #00B900, #00B900);
+            -webkit-background-clip: text;
+            opacity: 1;
+        }
+
+        .home-icon .discord {
+            background-color: transparent;
+            -webkit-text-fill-color: white;
+            -webkit-background-clip: unset;
+            opacity: 0.8;
+        }
+
+        .home-icon .discord:hover {
+            -webkit-text-fill-color: transparent;
+            background:
+                -webkit-linear-gradient(270deg, #7289d9, #7289d9);
+            -webkit-background-clip: text;
+            opacity: 1;
+        }
         .about-us-page {
             padding-top: 25vh;
             background-image: linear-gradient(180deg,
@@ -375,7 +404,7 @@
                                 height="160">
                         </a>
                     </div>
-                    <div class="col-auto container nav-items">
+                    <!-- <div class="col-auto container nav-items">
                         <ul class="nav nav-pills justify-content-center">
                             <li class="nav-item">
                                 <a class="nav-link link-light" href="./index.html">關於社群</a>
@@ -396,7 +425,7 @@
                             </li> -->
                         </ul>
                         <div class="nav-pills-background"></div>
-                    </div>
+                    </div> -->
                     <div class="col-2 h3 m-0">
                         <form class="float-end others">
                             <i class="fa fa-language icon-language" aria-hidden="true"></i>
@@ -442,7 +471,19 @@
                             </a>
                         </button>
                         <button class="ig">
-                            <i class="fab fa-instagram"></i>
+                            <a class="link-light" href="https://www.instagram.com/iet_oncampus_taichung_tech/?utm_medium=copy_link" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </button>
+                        <button class="line">
+                            <a class="link-light" href="https://line.me/ti/g2/jafLw1CBQBfy_v4teorw_A?utm_campaign=default&utm_medium=link_copy&utm_source=invitation" target="_blank">
+                                <i class="fab fa-line"></i>
+                            </a>
+                        </button>
+                        <button class="discord">
+                            <a class="link-light" href="https://discord.com/invite/NaQr5fT7fp" target="_blank">
+                                <i class="fab fa-discord"></i>
+                            </a>
                         </button>
                     </div>
                 </div>
@@ -566,7 +607,7 @@
                     <div class="container-fluid know-us-partners" style="margin-top: 10vh;">
                         <div class="text-center pb-1">
                             <h1>
-                                Our Global Partners
+                                Our Partners
                             </h1>
                         </div>
                         <div class="row">
@@ -700,6 +741,38 @@
     document.getElementsByClassName('clock')[0].classList='clock clock_show'
     }, 200)
     var data =[
+        {
+            type:       'event',
+            des:        'IET oncampus Taichung x Tech 首次社群講座開辦囉！',
+            title:      '【社群講座】',
+            content:    'IET oncampus Taichung x Tech 首次社群講座開辦囉！<br>\
+                        下午好～ 今天要的各位介紹的活動為本學期的社群講座，有興趣的朋友趕快報名參加喔！<br>\
+                        講座主題：  1. 策劃到內容企劃   2.行銷到宣傳  3. 設計如何介入前兩者<br>\
+                        活動時間：2021/10/30（六）14:00-17:00（共180分鐘）<br>\
+                        活動地點：Google Meeting（活動連結會寄送至報名時所填寫的信箱）<br>\
+                        講師：余世暄<br>\
+                        經歷：<br>\
+                        　　讓狂人飛股份有限公司 產品暨社群經理<br>\
+                        　　工具時代創意整合 共同創辦人<br>\
+                        　　TEDxTainan 2014年 策展暨設計長<br>\
+                        　　TEDxTainan 2015年 策展人、策展顧問<br>\
+                        　　報名連結：<a href="https://forms.gle/gSJucZF7nuMdTGf28" target="blank">https://forms.gle/gSJucZF7nuMdTGf28</a><br>'
+        },
+        {
+            type:       'event',
+            des:        'IET oncampus Taichung x Tech 茶會暨小聚開辦囉！',
+            title:      '【社群活動】',
+            content:    '   大家好～ 這次的活動為本學期的第一次線下社群討論，有興趣的朋友趕快報名參加喔！<br>\
+                            茶會主題：社群介紹、促進社員們之間的交流<br>\
+                            活動時間：2021/10/26（二）<br>\
+                            （晚上 6 點 30 分 - 8 點 30 分）<br>\
+                            活動地點：臺中科技大學3911<br>\
+                            （中正大樓九樓）<br>\
+                            線上軟體：Google Meeting<br>\
+                            報名連結：<a href="https://forms.gle/V9MHkpXWB55rDNoa8" target="blank">https://forms.gle/V9MHkpXWB55rDNoa8</a><br>\
+                            *因疫情與場地關係，本次活動將會限制人數並於現場實施實名制；線下活動人數暫定為 25 人，如超過 25 人將採優先報名順序來安排報名。<br>\
+                            *因人數限制而無法到現場的朋友們不用太擔心，我們會於通知信中附上線上連結，歡迎有興趣的人與我們一同參與!'
+        },
         {
             type:       'events',
             des:        '本社群與 #國立臺中科技大學 及 #奧斯丁教育團隊 所舉辦的英語雙師培訓研習課程正式圓滿落幕',
